@@ -8,8 +8,16 @@ S - Staff -2 (If you make a mistake)
 let score1display = document.getElementById("score1");
 let score2display = document.getElementById("score2");
 
+let reset = document.getElementById("resetButton");
+
 let score1 = 0;
 let score2 = 0;
+
+reset.addEventListener("click", (event) => {
+  score1 = 0;
+  score2 = 0;
+  updateDisplay();
+});
 
 document.addEventListener("keyup", (event) => {
   switch (event.key) {
